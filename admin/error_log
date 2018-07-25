@@ -1,0 +1,45 @@
+[07-May-2018 13:27:05 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[07-May-2018 13:27:10 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[07-May-2018 13:27:11 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[07-May-2018 13:27:13 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[08-May-2018 12:49:55 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[08-May-2018 12:50:03 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Founda in /home/kuchingi/public_html/eventmanagement/core/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[13-May-2018 15:17:54 UTC] PHP Fatal error:  Class 'App\Http\Controllers\api\OneSignal' not found in /home/kuchingi/public_html/eventmanagement/core/app/Http/Controllers/api/apps_eventMessageController.php on line 138
+[08-Jul-2018 00:58:54 Asia/Kuching] PHP Parse error:  syntax error, unexpected '<' in /home/kuchingi/public_html/eventmanagement/core/storage/framework/views/2fb538058fc9e465f3de923353d4f4ae2f79167d.php on line 67
+[12-Jul-2018 20:46:01 Asia/Kuching] PHP Fatal error:  Class 'App\Http\Controllers\api\notification_id' not found in /home/kuchingi/public_html/eventmanagement/core/app/Http/Controllers/api/apps_specialUserController.php on line 240

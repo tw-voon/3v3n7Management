@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth, Redirect, Validator;
+
+class LoginController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    public function roles_id(){
+        return 'roles_id';
+    }
+
+    public function login(Request $request){
+
+        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')],$request->has('remember'))) {
+            
+            if(Auth::user()->roles_id == '1' || Auth::user()->roles_id == '4'){
+                return Redirect::to('/home');
+            } else {
+                Auth::logout(); // log the user out of our application
+                return Redirect::to('login')->withErrors('You do not have permission to enter this panel');; // redirect the user to the login screen
+            }
+
+        } else 
+            return Redirect::to('login')->withErrors('Wrong Email or password');
+
+    }
+
+    public function logout()
+    {
+        Auth::logout(); // log the user out of our application
+        return Redirect::to('login'); // redirect the user to the login screen
+    }
+}

@@ -1,0 +1,67 @@
+<table>
+    <thead>
+    <tr>
+        <th>Category / Month</th>
+        <th>JAN</th>
+        <th>FEB</th>
+        <th>MAR</th>
+        <th>APR</th>
+        <th>MAY</th>
+        <th>JUN</th>
+        <th>JUL</th>
+        <th>AUG</th>
+        <th>SEP</th>
+        <th>OCT</th>
+        <th>NOV</th>
+        <th>DEC</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Category 1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Category 2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Category 3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+
+    </tbody>
+</table>

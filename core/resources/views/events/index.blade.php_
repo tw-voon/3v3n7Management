@@ -1,0 +1,149 @@
+@extends('layouts.app')
+
+@section('title', 'Events')
+
+@section('content')
+
+
+
+<div class="page-header">
+
+    <div class="page-header-title">
+
+        <h4>Events</h4>
+
+    </div>
+
+    <div class="page-header-breadcrumb">
+
+        <ul class="breadcrumb-title">
+
+            <li class="breadcrumb-item">
+
+                <a href="#!">
+
+                    <i class="icofont icofont-home"></i>
+
+                </a>
+
+            </li>
+
+            <li class="breadcrumb-item"><a href="#!">Events</a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<?php $start_count =  ($events->perpage() * $events->currentPage()) - $events->perpage() + 1; ?>
+
+
+
+<div class="page-body">
+
+
+
+	{{-- Table info section --}}
+
+
+
+	<div class="card">
+
+        <div class="card-header">
+
+            <h5>Events List</h5>
+
+            <span>Total of <code> Number of Events </code> inside table </span>
+
+            <div class="card-header-right">
+
+                <i class="icofont icofont-rounded-down"></i>
+
+                <i class="icofont icofont-refresh"></i>
+
+                <i class="icofont icofont-close-circled"></i>
+
+            </div>
+
+        </div>
+
+        <div class="card-block table-border-style">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Event Name</th>
+
+                            <th>Agency Name</th>
+
+                            <th>Event Category</th>
+
+                            <th>Event Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        @foreach($events as $event)
+
+                        <tr>
+
+                            <th scope="row">{{$start_count}}</th>
+
+                            <td>{{$event->title}}</td>
+
+                            <td>{{$event->user->name}}</td>
+
+                            <td>{{$event->category->category_name}}</td>
+
+                            <td>{{$event->status_id == '1' ? 'Ongoing' : 'Completed'}}</td>
+
+                            <td>
+
+                                <a class="btn btn-success btn-icon" href="{{route('event.view', $event->id)}}"><i class="icofont icofont-eye-alt"></i></a>
+
+                            </td>
+
+                        </tr>
+
+                        <?php $start_count ++; ?>
+
+                        @endforeach
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        @if(count($events) != 0)
+
+            {!! $events->appends(request()->input())->links('pagination') !!}
+
+        @endif
+
+    </div>
+
+
+
+</div>
+
+@endsection
