@@ -7,7 +7,7 @@
         <h4>Events</h4>
     </div>
     <div class="page-header-breadcrumb">
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
             <li class="breadcrumb-item">
                 <a href="#!">
                     <i class="icofont icofont-home"></i>
@@ -35,7 +35,7 @@
                 <a href="{{route('agency.create')}}"><i class="icofont icofont-ui-add"></i></a>
             </div>
         </div>
-        <div class="card-block table-border-style">
+        <div class="card-block table-border-style style="padding: 15px 20px;"">
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>

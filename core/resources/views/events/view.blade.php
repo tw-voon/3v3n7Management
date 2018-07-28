@@ -20,7 +20,7 @@
 
     <div class="page-header-breadcrumb">
 
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
 
             <li class="breadcrumb-item">
 
@@ -262,7 +262,7 @@
 
 
 
-	  			<div class="card-block user-desc">
+	  			<div class="card-block user-desc" style="padding: 15px 20px;">
 
                     <div class="view-desc">
 
@@ -290,7 +290,7 @@
 
 
 
-	  			<div class="card-block user-desc">
+	  			<div class="card-block user-desc" style="padding: 15px 20px;">
 
                     <div class="view-desc">
 
@@ -350,7 +350,7 @@
 
 
 
-	  			<div class="card-block user-desc">
+	  			<div class="card-block user-desc" style="padding: 15px 20px;">
 
                     <div class="view-desc" style="max-height: 500px; overflow: auto;">
 

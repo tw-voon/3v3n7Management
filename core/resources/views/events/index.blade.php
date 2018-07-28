@@ -16,7 +16,7 @@
 
     <div class="page-header-breadcrumb">
 
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
 
             <li class="breadcrumb-item">
 

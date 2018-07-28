@@ -16,7 +16,7 @@
 
     <div class="page-header-breadcrumb">
 
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
 
             <li class="breadcrumb-item">
 
@@ -64,13 +64,11 @@
 
                 <i class="icofont icofont-refresh"></i>
 
-                <i class="icofont icofont-close-circled"></i>
-
             </div>
 
         </div>
 
-        <div class="card-block">
+        <div class="card-block" style="padding: 15px 20px;">
 
 
 
@@ -102,11 +100,8 @@
 
 </div>
 
-
-
-<script src="/core/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-
-<script src="/core/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+<script src="/eventmanagement/core/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script src="/eventmanagement/core/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
 
 <script>
 

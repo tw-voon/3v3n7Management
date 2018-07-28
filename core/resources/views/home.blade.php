@@ -9,7 +9,7 @@
         <h4>Dashboard</h4>
     </div>
     <div class="page-header-breadcrumb">
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
             <li class="breadcrumb-item">
                 <a href="#!">
                     <i class="icofont icofont-home"></i>

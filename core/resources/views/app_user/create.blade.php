@@ -7,7 +7,7 @@
         <h4>Add new user</h4>
     </div>
     <div class="page-header-breadcrumb">
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
             <li class="breadcrumb-item">
                 <a href="#!">
                     <i class="icofont icofont-home"></i>
@@ -28,7 +28,7 @@
         <div class="card-header">
             <h5>New User</h5>
         </div>
-        <div class="card-block">
+        <div class="card-block" style="padding: 15px 20px;">
             <h4 class="sub-title">Please input usahawan user details</h4>
 
              <div class="row">

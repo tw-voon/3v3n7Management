@@ -70,7 +70,7 @@
 
                 <ul class="pcoded-item pcoded-left-item">
 
-                    <li class="{{ Request::is('events') ? 'active' : '' }} pcoded-trigger">
+                    <li class="{{ Request::is('events') || Request::is('events/*') ? 'active' : '' }} pcoded-trigger">
 
                         <a href="{{ route('event.index') }}">
 
@@ -90,7 +90,7 @@
 
                 <ul class="pcoded-item pcoded-left-item">
 
-                    <li class="{{ Request::is('events_category') ? 'active' : '' }} pcoded-trigger">
+                    <li class="{{ Request::is('events_category') || Request::is('events_category/*') ? 'active' : '' }} pcoded-trigger">
 
                         <a href="{{ route('event_cat.index') }}">
 

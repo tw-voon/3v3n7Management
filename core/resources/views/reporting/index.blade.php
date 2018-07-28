@@ -7,7 +7,7 @@
         <h4>Reporting</h4>
     </div>
     <div class="page-header-breadcrumb">
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
             <li class="breadcrumb-item">
                 <a href="#!">
                     <i class="icofont icofont-home"></i>
@@ -27,7 +27,7 @@
                 <div class="card-header">
                     <h5>Monthly Report<h5>
                 </div>
-                <div class="card-block">
+                <div class="card-block" style="padding: 15px 20px;">
                     <p>This will generate a monthly report based on how many event have been helded in each month by category</p>
                     <div><a class="btn btn-info btn-round btn-block" href="{{route('report.monthly')}}"><i class="icofont icofont-file-excel"></i> Export Excel</a></div>
                 </div>
@@ -40,7 +40,7 @@
                 <div class="card-header">
                     <h5>Agency Event Report<h5>
                 </div>
-                <div class="card-block">
+                <div class="card-block" style="padding: 15px 20px;">
                     <p>This will generate a monthly report based on how many event have been helded in each month by each agency</p>
                     <div><a class="btn btn-info btn-round btn-block" href="{{route('report.agency')}}"><i class="icofont icofont-file-excel"></i> Export Excel</a></div>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="card-header">
                     <h5>App Roles Report<h5>
                 </div>
-                <div class="card-block">
+                <div class="card-block" style="padding: 15px 20px;">
                     <p>This will generate a monthly report based on how many user had been enrolled into this System (exlude Admin)</p>
                     <div><a class="btn btn-info btn-round btn-block" href="{{route('report.roles_user')}}"><i class="icofont icofont-file-excel"></i> Export Excel</a></div>
                 </div>

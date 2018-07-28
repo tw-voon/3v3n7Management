@@ -7,7 +7,7 @@
         <h4>Events</h4>
     </div>
     <div class="page-header-breadcrumb">
-        <ul class="breadcrumb-title">
+        <ul class="breadcrumb breadcrumb-title">
             <li class="breadcrumb-item">
                 <a href="#!">
                     <i class="icofont icofont-home"></i>
@@ -28,7 +28,7 @@
         <div class="card-header">
             <h5>{{$agency->name}}</h5>
         </div>
-        <div class="card-block">
+        <div class="card-block" style="padding: 15px 20px;">
 
             <div class="row">
                 <div class="col-md-10"><h4 class="sub-title">Agency Information</h4></div>
@@ -109,7 +109,7 @@
                         <a class="btn btn-icon btn-success btn-new-user" href="{{route('agency_user.create',['agency_id' => $agency->id])}}"><i class="icofont icofont-ui-add"></i></a>
                     </div>
                 </div>
-                <div class="card-block">
+                <div class="card-block" style="padding: 15px 20px;">
                     @foreach($agency_user as $user)
                     <div class="media mt-2 ml-2">
                             <div class="media-left">
@@ -131,7 +131,7 @@
         <div class="col-md-6">
             <div class="card">
                 <h5 style="padding: 15px;">Agency Event</h5>
-                <div class="card-block">
+                <div class="card-block" style="padding: 15px 20px;">
                     <table class="table m-0">
                         <tbody>
                             <tr>
