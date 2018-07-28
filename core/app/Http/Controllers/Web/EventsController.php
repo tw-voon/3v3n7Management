@@ -68,4 +68,24 @@ class EventsController extends Controller
         return 'success';
 
     }
+
+    public function transport(Request $request){
+
+        $user_id = $request->input('user_id');
+        $event_id = $request->input('event_id');
+        $transport = $request->input('required_transport');
+
+        $attendees = attendees::where('user_id', $user_id)->where('event_id', $event_id)
+                    ->update(['required_transport' => $transport]);
+
+        return json_encode($attendees);
+    }
+
+    public function print_view(Request $request, $id){
+
+        $event = events::find($id);
+        $user_join = attendees::with('user')->where('event_id', $id)->get();
+
+        return view('events.print', compact('event','user_join'));
+    }
 }

@@ -25,7 +25,8 @@
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css')}}">
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="{{ asset('icon/themify-icons/themify-icons.css') }}">
     <!-- ico font -->
@@ -44,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/linearicons.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ asset('css/simple-line-icons.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.mCustomScrollbar.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap-sweetalert/dist/sweetalert.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/sweetalert2/dist/sweetalert2.min.css') }}">
     <script type="text/javascript" src="{{ asset('js/jquery-2.1.4.js') }}"></script>
 
     <!-- Styles -->
@@ -396,6 +397,7 @@
 <script type="text/javascript" src="{{ asset('plugins/jquery/dist/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plugins/tether/dist/js/tether.min.js') }}"></script>
+{{-- <script type="text/javascript" src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script> --}}
 <script type="text/javascript" src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- jquery slimscroll js -->
 <script type="text/javascript" src="{{ asset('plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
@@ -427,6 +429,6 @@
 <script src="{{ asset('js/demo-12.js') }}"></script>
 <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
 <script src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
-<script src="{{ asset('node_modules/bootstrap-sweetalert/dist/sweetalert.min.js') }}"></script>
+<script src="{{ asset('node_modules/sweetalert2/dist/sweetalert2.min.js') }}"></script>
 </body>
 </html>

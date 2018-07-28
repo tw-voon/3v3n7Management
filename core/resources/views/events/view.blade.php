@@ -4,7 +4,11 @@
 
 @section('content')
 
-
+<style type="text/css">
+    .swal-large{
+        width: 600px;
+    }
+</style>
 
 <div class="page-header">
 
@@ -182,7 +186,7 @@
 
                         </tr>
 
-                        <tr data-toggle="modal" data-target="#attendModal">
+                        <tr id="openAttend" data-toggle="modal" data-target="#attendModal">
 
                             <th style="width: 22%;"><span><i class="icofont icofont-users-alt-1"></i></span> User attend </th>
 
@@ -436,17 +440,27 @@
 
 <script type="text/javascript" src="{{ asset('plugins/jquery/dist/jquery.min.js') }}"></script>
 
-<div id="attendModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog modal-full" role="document">
-        <div class="modal-content">
-            <div class="modal-header"><h4>User who joined this event</h4></div>
+<div id="attendModal" class="modal p-0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-full h-100">
+        <div class="modal-content rounded-0 h-100">
+            <div class="modal-header">
+                <h4 class="modal-title" style="margin-left: auto;">User who joined this event</h4>
+                <button type="button" class="close" style="font-size: 20px;" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+            </div>
             <div class="modal-body">
+                <div class="row form-group">
+                    <div class="col-1 border-right"><a class="btn btn-link" href="#"> Action </a></div>
+                    <div class="col-2">
+                        <a class="btn btn-info btn-icon" href="{{route('event.print', $common->id)}}" target="_blank"><i class="icofont icofont-print"></i></a>
+                    </div>
+                </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th style="width: 10%;">No</th>
+                            <th style="width: 40%;">Name</th>
+                            <th style="width: 40%;">Email</th>
+                            <th style="width: 40%;">Required Transport</th>
                         </tr>        
                     </thead>
                     <tbody>
@@ -456,132 +470,130 @@
                             <td>{{$count}}</td>
                             <td>{{$joined->user->name}}</td>
                             <td>{{$joined->user->email}}</td>
+                            <td class="text-center">
+                                @if($joined->required_transport)
+                                    <button class="btn btn-success btn-transport" data-value="1" data-user="{{$joined->user->id}}">Yes</button>
+                                @else
+                                    <button class="btn btn-default btn-transport" data-value="0" data-user="{{$joined->user->id}}">No</button>
+                                @endif
+                            </td>
                         </tr>
                         <?php $count ++; ?>
                         @endforeach
                     </tbody>
                 </table>
+                <input type="hidden" name="event_id" value="{{$common->id}}">
             </div>
         </div>
     </div>
 </div>
 
-  <div id="myModalmap" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-  <div class="modal-dialog" style="width: 50vw; max-width: 50vw;">
-
-
-
+<div id="myModalmap" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 50vw; max-width: 50vw;">
     <!-- Modal content-->
-
-    <div class="modal-content" style="width: 50vw; margin: auto;">
-
-      <div class="modal-header" style="width: 50vw; margin: auto;">
-
-        <h4 class="modal-title">{{$events_data[0]->locations->name}}</h4>
-
-      </div>
-
-      <div class="modal-body">
-
-        <div id="map" style="height: 500px;"></div>
-
-      </div>
-
-      <div class="modal-footer">
-
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-      </div>
-
+        <div class="modal-content" style="width: 50vw; margin: auto;">
+            <div class="modal-header" style="width: 50vw; margin: auto;">
+                <h4 class="modal-title">{{$events_data[0]->locations->name}}</h4>
+            </div>
+            <div class="modal-body">
+                <div id="map" style="height: 500px;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 
+    <script>
+        function initMap() {
 
+            var uluru = {lat: <?php echo $events_data[0]->locations->lat ?>, lng: <?php echo $events_data[0]->locations->lon ?>};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru,
+                zoomControl: false,
+            });
 
-  </div>
-
-
-
-  <script>
-
-    function initMap() {
-
-      var uluru = {lat: <?php echo $events_data[0]->locations->lat ?>, lng: <?php echo $events_data[0]->locations->lon ?>};
-
-      var map = new google.maps.Map(document.getElementById('map'), {
-
-        zoom: 15,
-
-        center: uluru,
-
-        zoomControl: false,
-
-      });
-
-      var marker = new google.maps.Marker({
-
-        position: uluru,
-
-        map: map
-
-      });
-
-    
-    }
-
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
     </script>
-
 </div>
 
-
-  <script async defer
-
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEw4F7C21g9g3i7JnsNIemUxLUH2NpVDk&callback=initMap">
-
-  </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEw4F7C21g9g3i7JnsNIemUxLUH2NpVDk&callback=initMap">
+</script>
 
 
 <script type="text/javascript">
 
 	$(document).ready(function(){
 
-		// $('#mytab a').on('click',function(e){
+        $("#myModalmap").on("shown.bs.modal", function (e) {
+          initMap();
+          e.preventDefault();
+        });
 
-		// 	e.preventDefault()
+        $('.btn-transport').on('click', function(e){
 
-		// 	$(this).parent().parent().children('li').removeClass('active');
+            var user = $(this).attr('data-user');
+            var event_id = $('input[name="event_id"]').val();
+            var required_transport = $(this).attr('data-value') == '1' ? '0' : '1';
+            var element = $(this);
 
-  // 			$(this).tab('show');
+            $.ajax({
+                url: "{{url('/') . '/events/transport'}}",
+                type: "post",
+                data: { _token : '<?php echo csrf_token(); ?>', event_id: event_id, user_id: user, required_transport: required_transport},
+                dataType: 'json',
+                success: function(json){
 
-		// });
+                    console.log(json);
+                    swal("Success", "Successfully add this user to transport list", "success");
 
-    // $("#myModalmap").on("shown.bs.modal", function () {
+                    if(required_transport == '1'){
+                        element.removeClass('btn-default');
+                        element.addClass('btn-success');
+                        element.attr('data-value', required_transport);
+                        element.text('Yes');
+                    } else {
+                        element.removeClass('btn-success');
+                        element.addClass('btn-default');
+                        element.attr('data-value', required_transport);
+                        element.text('No');
+                    }
+                    
 
-    //   initMap();
+                },
+                error: function(json){
 
-    // });
+                    console.log(json);
+                    swal("Error", "Error encounter while perform this action", "error");
 
-    $("#myModalmap").on("shown.bs.modal", function (e) {
+                }
+            })
 
-      initMap();
-      e.preventDefault();
-      // $('body').addClass('modal-open');
-      // $("#myModalmap").css('display','block');
-
-    });
-
-    // $("#myModalmap").on("hidden.bs.modal", function () {
-
-    //   $("#myModalmap").hide();
-
-    // });
-
+        });
+        
 	});
 
+    function openPrintDialogue(){
+        $('<iframe>', {
+            name: 'myiframe',
+            class: 'printFrame'
+        })
+        .appendTo('body')
+        .contents().find('body')
+        .append($('#attendModal .table').html());
+
+        window.frames['myiframe'].focus();
+        window.frames['myiframe'].print();
+
+        setTimeout(() => { $(".printFrame").remove(); }, 1000);
+    };
+
 </script>
-
-
-
-
 
 @endsection

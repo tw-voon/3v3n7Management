@@ -45,6 +45,8 @@ Route::group(['middleware' => ['web','auth']], function () {
 	Route::get('/events/view/{id}', 'Web\EventsController@view')->name('event.view');
 	Route::get('/events', 'Web\EventsController@index')->name('event.index');
 	Route::post('/events/remove', 'Web\EventsController@remove')->name('event.remove');
+	Route::post('/events/transport', 'Web\EventsController@transport')->name('event.transport');
+	Route::get('events/print/{id}', 'Web\EventsController@print_view')->name('event.print');
 
 	// EVENT CATEGORY
 	Route::get('/events_category/new', 'Web\EventsCategoryController@create')->name('event_cat.create');
